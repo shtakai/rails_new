@@ -57,6 +57,9 @@ gem 'sidekiq'
 # Security
 gem 'secure_headers', require: false
 
+# Use YAJL as the default (faster, less memory-intensive) JSON backend
+gem 'yajl-ruby', '~> 1.3', require: 'yajl/json_gem'
+
 group :production do
   # Remove this if the app is not hosted on Heroku
   gem 'heroku-deflater'
